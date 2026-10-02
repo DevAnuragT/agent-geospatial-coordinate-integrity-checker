@@ -1,0 +1,35 @@
+{
+  "slug": "geospatial-coordinate-integrity-checker",
+  "title": "Geospatial Coordinate Integrity Checker",
+  "category": "data-quality",
+  "description": "Checks coordinate reference declaration and counts of invalid or out-of-bounds coordinates.",
+  "decision": "Checks coordinate reference declaration and counts of invalid or out-of-bounds coordinates.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "coordinate_reference_system": "EPSG:4326",
+    "invalid_coordinate_count": 0,
+    "out_of_bounds_count": 0
+  },
+  "bad": {},
+  "rules": [
+    [
+      "coordinate_reference_system",
+      "coordinate reference system",
+      "required",
+      null
+    ],
+    [
+      "invalid_coordinate_count",
+      "invalid coordinate count",
+      "max",
+      0
+    ],
+    [
+      "out_of_bounds_count",
+      "out-of-bounds count",
+      "max",
+      0
+    ]
+  ]
+}

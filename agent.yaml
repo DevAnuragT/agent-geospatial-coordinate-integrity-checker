@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: geospatial-coordinate-integrity-checker
+version: 0.1.0
+description: "Checks coordinate reference declaration and counts of invalid or out-of-bounds coordinates."
+skills:
+  - geospatial-coordinate-integrity-checker-skill
+tools:
+  - audit-geospatial-coordinate-integrity-checker
+tags:
+  - data-quality
+  - evidence-driven
